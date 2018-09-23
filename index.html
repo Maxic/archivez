@@ -1,0 +1,45 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="static/index.css">
+      <link rel="stylesheet" href="static/normalize.css">
+      <link rel="stylesheet" href="static/skeleton.css">
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+      <img src="assets/logo.png" class=center>  
+      <div class="container" id="games">
+        <!-- START TEMPLATE -->
+        <div class="row" v-for="game in games">
+          
+          <div v-if="game.episode % 2 == 0" class="left">
+            <div class="two columns">
+              <img v-if="game.winner" src="assets/FloppyCrown.png" height=128>
+              <img v-else src="assets/FloppyClean.png" height=128>
+            </div>
+            <div class="three columns">
+              <br>
+              <br>
+              <a :href="game.link">{{ game.title }}</a>
+            </div>
+            <div class="nine columns"/>
+            </div>
+          </div>
+          <div v-else class="right">
+            <div class="six columns"/>
+            &nbsp;
+            </div>
+            <div class="three columns">
+              <br>
+              <br>
+              <a :href="game.link">{{ game.title }}</a>
+            </div>
+            <div class="two columns">
+              <img v-if="game.winner" src="assets/FloppyCrown.png" height=128>
+              <img v-else src="assets/FloppyClean.png" height=128>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="index.js"></script>
+    </body>
+</html>
