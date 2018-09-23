@@ -6,19 +6,34 @@
       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
-      <img src="assets/Logo.png" class=center>  
-      <div id="app">
+      <img src="assets/Logo.png" class=center>
+      <div class="container" id="app">
+        <div class="row">
+          <div class="eigth columns">
+            &nbsp;
+          </div>
+          <div class="one column">
+            <label class="switch">
+              <input type="checkbox" v-on:click="switchView" hidden>
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="three columns">
+            &nbsp;
+          </div>
+        </div>
         <episode-list 
+          v-if="toggleEpisode"
           v-for="game in games"
           v-bind:game="game">
         </episode-list>
-        <!--
-        <ranking-list 
-          v-for="game in games"
-          v-bind:game="game"
-          v-bind:key="game.ranking">
-        </ranking-list>
-        -->
+        <div v-if="!toggleEpisode">
+          <ranking-list 
+            v-for="game in orderedGames" 
+            v-bind:game="game"
+            v-bind:key="game.ranking">
+          </ranking-list>
+        </div>
       </div>
       <script src="index.js"></script>
     </body>

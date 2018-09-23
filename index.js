@@ -35,7 +35,14 @@ Vue.component('ranking-list', {
 	`
 	<div class="container">
 	  <div v-if="game.winner" class="row">
-	   {{ game.title }}
+	   <div class="three columns">
+	     <img src="assets/FloppyCrown.png" height=128>
+       </div>
+       <div class="nine columns">
+         <br>
+         <br>
+         {{ game.ranking }} {{ game.title }}
+       </div>
 	 </div>
 	</div> 
 	`,
@@ -44,6 +51,7 @@ Vue.component('ranking-list', {
 var app = new Vue({
   el: '#app',
   data: {
+  	toggleEpisode : true,
     games: [
       { 
       	title: 'Timothy Leary\'s Mind Mirror' ,
@@ -152,5 +160,16 @@ var app = new Vue({
       	ranking: 1,
       },
     ]
+  },
+  computed: {
+  	orderedGames : function(){
+  		return this.games.filter(function(a){ return a.ranking != null
+  		}).sort(function(a,b){return a.ranking - b.ranking})
+  	}
+  },
+  methods : {
+  	switchView: function () {
+      this.toggleEpisode = !this.toggleEpisode
+    }
   }
 })
