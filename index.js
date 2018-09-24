@@ -63,14 +63,14 @@ var app = new Vue({
       { 
       	title: 'Oxyd',
       	link: 'https://archive.org/details/msdos_Oxyd_1992', 
-      	winner: true,
+      	winner: false,
         episode: 5,
-      	ranking: 5,
+      	ranking: 4,
       },
       { 
       	title: 'Lords of Doom',
       	link: 'https://archive.org/details/msdos_Lords_of_Doom_1990',
-      	winner: false,
+      	winner: true,
         episode: 5,
       	ranking: null,
       },
@@ -115,7 +115,7 @@ var app = new Vue({
       	link: 'https://archive.org/details/agi_uri-quest-v0.173',
       	winner: true,
         episode: 3,
-      	ranking: 4,
+      	ranking: 5,
       },
       { 
       	title: 'Project Neptune' ,
