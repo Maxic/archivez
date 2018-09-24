@@ -65,14 +65,14 @@ var app = new Vue({
       	link: 'https://archive.org/details/msdos_Oxyd_1992', 
       	winner: false,
         episode: 5,
-      	ranking: 4,
+      	ranking: null,
       },
       { 
       	title: 'Lords of Doom',
       	link: 'https://archive.org/details/msdos_Lords_of_Doom_1990',
       	winner: true,
         episode: 5,
-      	ranking: null,
+      	ranking: 4,
       },
       { 
       	title: 'Jordan vs Bird, One-on-One',
