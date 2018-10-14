@@ -54,6 +54,27 @@ var app = new Vue({
   	toggleEpisode : true,
     games: [
       { 
+      	title: 'Adventures in Melgratta',
+      	link: 'https://archive.org/details/msdos_4th_and_Inches_1988', 
+      	winner: false,
+        episode: 6,
+      	ranking: null,
+      },
+      { 
+      	title: 'Kret' ,
+      	link: 'https://archive.org/details/msdos_Kret_1991', 
+      	winner: true,
+      	episode: 6,
+      	ranking: 4,
+      },
+      { 
+      	title: '4th & Inches',
+      	link: 'https://archive.org/details/game-maker_adventures-in-melgratta',
+      	winner: false,
+        episode: 6,
+      	ranking: null,
+      },
+      { 
       	title: 'Timothy Leary\'s Mind Mirror' ,
       	link: 'https://archive.org/details/msdos_Timothy_Learys_Mind_Mirror_1986', 
       	winner: false,
@@ -72,7 +93,7 @@ var app = new Vue({
       	link: 'https://archive.org/details/msdos_Lords_of_Doom_1990',
       	winner: true,
         episode: 5,
-      	ranking: 4,
+      	ranking: 5,
       },
       { 
       	title: 'Jordan vs Bird, One-on-One',
@@ -115,7 +136,7 @@ var app = new Vue({
       	link: 'https://archive.org/details/agi_uri-quest-v0.173',
       	winner: true,
         episode: 3,
-      	ranking: 5,
+      	ranking: 6,
       },
       { 
       	title: 'Project Neptune' ,
