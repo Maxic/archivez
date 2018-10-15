@@ -53,7 +53,7 @@ var app = new Vue({
   data: {
   	toggleEpisode : true,
     games: [
-       {
+      {
       	title: "Troll's Tale",
       	link: "https://archive.org/details/msdos_Trolls_Tale_1984",
       	winner: false,
@@ -73,7 +73,7 @@ var app = new Vue({
       	winner: false,
         episode: 7,
       	ranking: null,
-      }
+      },
       { 
       	title: 'Adventures in Melgratta',
       	link: 'https://archive.org/details/msdos_4th_and_Inches_1988', 
