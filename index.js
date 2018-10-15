@@ -53,26 +53,49 @@ var app = new Vue({
   data: {
   	toggleEpisode : true,
     games: [
+    /*
       {
       	title: "Troll's Tale",
       	link: "https://archive.org/details/msdos_Trolls_Tale_1984",
       	winner: false,
-        episode: 7,
+        episode: 8,
       	ranking: null,
       },
       {
       	title: "Ballie D. Plumber Episode 1: Ballie in D. Pipes",
       	link: "https://archive.org/details/game-maker_ballie-in-d-pipes",
       	winner: false,
-        episode: 7,
+        episode: 8,
       	ranking: null,
       },
       {
       	title: "C.I.A. Adventure",
       	link: "https://archive.org/details/cia-adventure",
       	winner: false,
+        episode: 8,
+      	ranking: null,
+      },
+      */
+      {
+      	title: "Sopwith 2",
+      	link: "https://archive.org/details/msdos_Sopwith_2_1985",
+      	winner: false,
         episode: 7,
       	ranking: null,
+      },
+      {
+      	title: "Thief's Adventure",
+      	link: "https://archive.org/details/msdos_Thiefs_Adventure_1986",
+      	winner: false,
+        episode: 7,
+      	ranking: null,      
+      },
+      {
+      	title: "Fallen Angel",
+      	link: "https://archive.org/details/msdos_Fallen_Angel_1989",
+      	winner: false,
+        episode: 7,
+      	ranking: null,      	
       },
       { 
       	title: 'Adventures in Melgratta',
