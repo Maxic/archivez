@@ -53,6 +53,27 @@ var app = new Vue({
   data: {
   	toggleEpisode : true,
     games: [
+       {
+      	title: "Troll's Tale",
+      	link: "https://archive.org/details/msdos_Trolls_Tale_1984",
+      	winner: false,
+        episode: 7,
+      	ranking: null,
+      },
+      {
+      	title: "Ballie D. Plumber Episode 1: Ballie in D. Pipes",
+      	link: "https://archive.org/details/game-maker_ballie-in-d-pipes",
+      	winner: false,
+        episode: 7,
+      	ranking: null,
+      },
+      {
+      	title: "C.I.A. Adventure",
+      	link: "https://archive.org/details/cia-adventure",
+      	winner: false,
+        episode: 7,
+      	ranking: null,
+      }
       { 
       	title: 'Adventures in Melgratta',
       	link: 'https://archive.org/details/msdos_4th_and_Inches_1988', 
