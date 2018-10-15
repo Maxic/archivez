@@ -41,7 +41,7 @@ Vue.component('ranking-list', {
        <div class="nine columns">
          <br>
          <br>
-         {{ game.ranking }} {{ game.title }}
+         {{ game.ranking }}. <a :href="game.link">{{ game.title }}</a>
        </div>
 	 </div>
 	</div> 
