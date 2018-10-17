@@ -15,7 +15,7 @@ Vue.component('episode-list', {
         </div>
         <div class="six columns">
         <br>
-		<center<<a :href="game.link">{{ game.title }}</a></center>
+		<center><a :href="game.link">{{ game.title }}</a></center>
         </div>
         <div class="three columns"/>
           <div v-if="!(game.episode % 2 == 0)">
