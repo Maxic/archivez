@@ -14,9 +14,8 @@ Vue.component('episode-list', {
          </div>
         </div>
         <div class="six columns">
-          <br>
-          <br>
-          <a :href="game.link">{{ game.title }}</a>
+        <br>
+		<center<<a :href="game.link">{{ game.title }}</a></center>
         </div>
         <div class="three columns"/>
           <div v-if="!(game.episode % 2 == 0)">
@@ -28,6 +27,15 @@ Vue.component('episode-list', {
     </div>
 	`,
 })
+
+/*
+  
+
+<img src="assets/uriquest.png" height=80>
+<center><a :href="game.link">{{ game.title }}</a></center>
+<a :href="game.link">{{ game.title }}</a>
+
+*/
 
 Vue.component('ranking-list', {
 	props: ['game'],
