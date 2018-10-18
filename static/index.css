@@ -11,12 +11,12 @@ html, body {
 }
 
 @font-face {
-  font-family: myFirstFont;
+  font-family: bitmap;
   src: url(Fipps-Regular.otf);
 }
 
 a {
-  font-family: myFirstFont;
+  font-family: bitmap;
   text-decoration: none;
   color: black;
 }
