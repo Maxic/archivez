@@ -15,6 +15,7 @@ Vue.component('episode-list', {
         </div>
         <div class="six columns">
         <br>
+        <br>
 		<center><a :href="game.link">{{ game.title }}</a></center>
         </div>
         <div class="three columns"/>
@@ -29,12 +30,9 @@ Vue.component('episode-list', {
 })
 
 /*
-  
-
 <img src="assets/uriquest.png" height=80>
 <center><a :href="game.link">{{ game.title }}</a></center>
 <a :href="game.link">{{ game.title }}</a>
-
 */
 
 Vue.component('ranking-list', {
@@ -49,7 +47,7 @@ Vue.component('ranking-list', {
        <div class="nine columns">
          <br>
          <br>
-         {{ game.ranking }}. <a :href="game.link">{{ game.title }}</a>
+          <a :href="game.link">{{ game.ranking }}. {{ game.title }}</a>
        </div>
 	 </div>
 	</div> 

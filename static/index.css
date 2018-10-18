@@ -10,6 +10,20 @@ html, body {
     width: 50%;
 }
 
+@font-face {
+  font-family: myFirstFont;
+  src: url(Fipps-Regular.otf);
+}
+
+a {
+  font-family: myFirstFont;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #e177fe; }
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -47,7 +61,7 @@ html, body {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #4d5777;
 }
 
 input:focus + .slider {
