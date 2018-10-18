@@ -42,7 +42,7 @@ Vue.component('ranking-list', {
 	<div class="container">
 	  <div v-if="game.winner" class="row">
 	   <div class="three columns">
-	     <img src="assets/FloppyCrown.png" height=128>
+	     <img src="assets/MS-DOS_icon_gold.png" height=68>
        </div>
        <div class="nine columns">
          <br>
