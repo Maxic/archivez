@@ -20,7 +20,13 @@ a {
   text-decoration: none;
   color: black;
 }
-
+.links {
+  font-family: bitmap;
+  text-decoration: none;
+  color: black;
+  position: relative; left: +67px;
+  position: relative; top: 8px;
+}
 .ranking {
   font-family: bitmap;
   text-decoration: none;
