@@ -21,18 +21,21 @@
               <div class="ranking">Ranking</div>
             </label>
           </div>
+          <div class="two collums">
+            <div class="links">Mail ons op archivezpodcast [at] gmail.com</div>
+          <div>
           <div class="three columns">
             &nbsp;
           </div>
         </div>
-        <episode-list 
+        <episode-list
           v-if="toggleEpisode"
           v-for="game in games"
           v-bind:game="game">
         </episode-list>
         <div v-if="!toggleEpisode">
-          <ranking-list 
-            v-for="game in orderedGames" 
+          <ranking-list
+            v-for="game in orderedGames"
             v-bind:game="game"
             v-bind:key="game.ranking">
           </ranking-list>
