@@ -21,6 +21,22 @@ a {
   color: black;
 }
 
+.ranking {
+  font-family: bitmap;
+  text-decoration: none;
+  color: black;
+  position: relative; left: +67px;
+  position: relative; top: 8px;
+}
+
+.eplist {
+  font-family: bitmap;
+  text-decoration: none;
+  color: black;
+  position: relative; left: -67px;
+  position: relative; top: 8px;
+}
+
 a:hover {
   color: #e177fe; }
 
