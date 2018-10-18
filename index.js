@@ -6,8 +6,10 @@ Vue.component('episode-list', {
       <div class="left">
         <div class="three columns">
          <div v-if="game.episode % 2 == 0">
+         <center>
           <img v-if="game.winner" src="assets/MS-DOS_icon_gold.png" height=68>
           <img v-else src="assets/MS-DOS_icon.png" height=68>
+          </center>
          </div>
          <div v-else>
          &nbsp;
@@ -15,13 +17,14 @@ Vue.component('episode-list', {
         </div>
         <div class="six columns">
         <br>
-        <br>
 		<center><a :href="game.link">{{ game.title }}</a></center>
         </div>
         <div class="three columns"/>
           <div v-if="!(game.episode % 2 == 0)">
+          <center>
           <img v-if="game.winner" src="assets/MS-DOS_icon_gold.png" height=68>
           <img v-else src="assets/MS-DOS_icon.png" height=68>
+          </center>
           </div>
         </div>
       </div>
@@ -45,7 +48,6 @@ Vue.component('ranking-list', {
 	     <img src="assets/MS-DOS_icon_gold.png" height=68>
        </div>
        <div class="nine columns">
-         <br>
          <br>
           <a :href="game.link">{{ game.ranking }}. {{ game.title }}</a>
        </div>
