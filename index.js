@@ -3,55 +3,51 @@ Vue.component('episode-list', {
 	template:
 	`
     <div class="container">
-      <div class="left">
-        <div class="three columns">
-         <div v-if="game.episode % 2 == 0">
-         <center>
-          <img v-if="game.winner" src="assets/MS-DOS_icon_gold.png" height=68>
-          <img v-else src="assets/MS-DOS_icon.png" height=68>
-          </center>
-         </div>
-         <div v-else>
-         &nbsp;
-         </div>
-        </div>
-        <div class="six columns">
-        <br>
-		<center><a :href="game.link">{{ game.title }}</a></center>
-        </div>
-        <div class="three columns"/>
-          <div v-if="!(game.episode % 2 == 0)">
-          <center>
-          <img v-if="game.winner" src="assets/MS-DOS_icon_gold.png" height=68>
-          <img v-else src="assets/MS-DOS_icon.png" height=68>
-          </center>
-          </div>
-        </div>
+     <div class="three columns">
+      <div v-if="game.episode % 2 == 0">
+       <center>
+        <img v-if="game.winner" src="assets/MS-DOS_icon_gold.png" height=68>
+        <img v-else src="assets/MS-DOS_icon.png" height=68>
+        <br><br>
+       </center>
       </div>
+      <div v-else>
+       &nbsp;
+      </div>
+     </div>
+     <div class="six columns">
+     <br>
+	 <center><a :href="game.link">{{ game.title }}</a></center>
+     </div>
+     <div class="three columns"/>
+      <div v-if="!(game.episode % 2 == 0)">
+       <center>
+      	<img v-if="game.winner" src="assets/MS-DOS_icon_gold.png" height=68>
+      	<img v-else src="assets/MS-DOS_icon.png" height=68>
+      	<br><br>
+       </center>
+      </div>
+     </div>
     </div>
 	`,
 })
 
-/*
-<img src="assets/uriquest.png" height=80>
-<center><a :href="game.link">{{ game.title }}</a></center>
-<a :href="game.link">{{ game.title }}</a>
-*/
 
 Vue.component('ranking-list', {
 	props: ['game'],
 	template:
 	`
 	<div class="container">
-	  <div v-if="game.winner" class="row">
-	   <div class="three columns">
-	     <img src="assets/MS-DOS_icon_gold.png" height=68>
-       </div>
-       <div class="nine columns">
-         <br>
-          <a :href="game.link">{{ game.ranking }}. {{ game.title }}</a>
-       </div>
+	 <div v-if="game.winner" class="row">
+	  <div class="three columns">
+	   <img src="assets/MS-DOS_icon_gold.png" height=68>
+      </div>
+      <div class="nine columns">
+       <br>
+       <a :href="game.link">{{ game.ranking }}. {{ game.title }}</a>
+      </div>
 	 </div>
+	 <br>
 	</div>
 	`,
 })

@@ -80,8 +80,12 @@ a:hover {
   transition: .4s;
 }
 
+.container {
+
+}
+
 input:checked + .slider {
-  background-color: #4d5777;
+  background-color: #e177fe;
 }
 
 input:focus + .slider {

@@ -49,23 +49,18 @@
             <div class="links">&nbsp;</div>
           </div>
         </div>
-        <div class="row">
-          <div class="eight columns">
-            &nbsp;
-          </div>
-        </div>
+        <br><br><br>        
         <episode-list
           v-if="toggleEpisode"
           v-for="game in games"
           v-bind:game="game">
         </episode-list>
-        <div v-if="!toggleEpisode">
-          <ranking-list
-            v-for="game in orderedGames"
-            v-bind:game="game"
-            v-bind:key="game.ranking">
-          </ranking-list>
-        </div>
+        <ranking-list
+          v-if="!toggleEpisode"
+          v-for="game in orderedGames"
+          v-bind:game="game"
+          v-bind:key="game.ranking">
+        </ranking-list>
       </div>
       <script src="index.js"></script>
     </body>
