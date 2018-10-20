@@ -6,7 +6,7 @@ Vue.component('episode-list', {
      <div class="three columns">
       <div v-if="game.episode % 2 == 0">
        <center>
-        <img v-if="game.winner" src="assets/MS-DOS_icon_gold.gif" height=68>
+        <img v-if="game.winner" src="assets/MS-DOS_icon_gold.png" height=68>
         <img v-else src="assets/MS-DOS_icon.png" height=68>
         <br><br>
        </center>
@@ -22,7 +22,7 @@ Vue.component('episode-list', {
      <div class="three columns"/>
       <div v-if="!(game.episode % 2 == 0)">
        <center>
-      	<img v-if="game.winner" src="assets/MS-DOS_icon_gold.gif" height=68>
+      	<img v-if="game.winner" src="assets/MS-DOS_icon_gold.png" height=68>
       	<img v-else src="assets/MS-DOS_icon.png" height=68>
       	<br><br>
        </center>
