@@ -40,7 +40,8 @@ Vue.component('ranking-list', {
 	<div class="container">
 	 <div v-if="game.winner" class="row">
 	  <div class="three columns">
-	   <img src="assets/MS-DOS_icon_gold.png" height=68>
+	   <img v-if="game.ranking == 1" src="assets/MS-DOS_icon_gold.gif" height=68>
+       <img v-else src="assets/MS-DOS_icon_gold.png" height=68>
       </div>
       <div class="nine columns">
        <br>
@@ -57,6 +58,20 @@ var app = new Vue({
   data: {
   	toggleEpisode : true,
     games: [
+      /*
+      {
+        title : "DEMO .EXE (Obscure MS-DOS Game)",
+        link: "https://archive.org/details/demoexe"
+      },
+      {
+        title: "Tag Team Wrestling",
+        link: "https://archive.org/details/msdos_Tag_Team_Wrestling_1986"
+      },
+      {
+        title: "Druglord",
+        link: "https://archive.org/details/msdos_Druglord_1991"
+      },
+      */
       {
       	title: "Troll's Tale",
       	link: "https://archive.org/details/msdos_Trolls_Tale_1984",
