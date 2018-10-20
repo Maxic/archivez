@@ -57,7 +57,6 @@ var app = new Vue({
   data: {
   	toggleEpisode : true,
     games: [
-    /*
       {
       	title: "Troll's Tale",
       	link: "https://archive.org/details/msdos_Trolls_Tale_1984",
@@ -79,13 +78,12 @@ var app = new Vue({
         episode: 8,
       	ranking: null,
       },
-      */
       {
       	title: "Sopwith 2",
       	link: "https://archive.org/details/msdos_Sopwith_2_1985",
-      	winner: false,
+      	winner: true,
         episode: 7,
-      	ranking: null,
+      	ranking: 4,
       },
       {
       	title: "Thief's Adventure",
@@ -113,7 +111,7 @@ var app = new Vue({
       	link: 'https://archive.org/details/msdos_Kret_1991',
       	winner: true,
       	episode: 6,
-      	ranking: 4,
+      	ranking: 5,
       },
       {
       	title: '4th & Inches',
@@ -141,7 +139,7 @@ var app = new Vue({
       	link: 'https://archive.org/details/msdos_Lords_of_Doom_1990',
       	winner: true,
         episode: 5,
-      	ranking: 5,
+      	ranking: 6,
       },
       {
       	title: 'Jordan vs Bird, One-on-One',
@@ -184,7 +182,7 @@ var app = new Vue({
       	link: 'https://archive.org/details/agi_uri-quest-v0.173',
       	winner: true,
         episode: 3,
-      	ranking: 6,
+      	ranking: 7,
       },
       {
       	title: 'Project Neptune' ,
