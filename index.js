@@ -57,27 +57,34 @@ var app = new Vue({
   el: '#app',
   data: {
   	toggleEpisode : true,
-    games: [
-      /*
+    games: [      
       {
         title : "DEMO .EXE (Obscure MS-DOS Game)",
-        link: "https://archive.org/details/demoexe"
+        link: "https://archive.org/details/demoexe",
+        winner: false,
+        episode: 9,
+        ranking: null,
       },
       {
         title: "Tag Team Wrestling",
-        link: "https://archive.org/details/msdos_Tag_Team_Wrestling_1986"
+        link: "https://archive.org/details/msdos_Tag_Team_Wrestling_1986",
+        winner: false,
+        episode: 9,
+        ranking: null,
       },
       {
         title: "Druglord",
-        link: "https://archive.org/details/msdos_Druglord_1991"
+        link: "https://archive.org/details/msdos_Druglord_1991",
+        winner: false,
+        episode: 9,
+        ranking: null,
       },
-      */
       {
       	title: "Troll's Tale",
       	link: "https://archive.org/details/msdos_Trolls_Tale_1984",
-      	winner: false,
+      	winner: true,
         episode: 8,
-      	ranking: null,
+      	ranking: 6,
       },
       {
       	title: "Ballie D. Plumber Episode 1: Ballie in D. Pipes",
@@ -154,7 +161,7 @@ var app = new Vue({
       	link: 'https://archive.org/details/msdos_Lords_of_Doom_1990',
       	winner: true,
         episode: 5,
-      	ranking: 6,
+      	ranking: 7,
       },
       {
       	title: 'Jordan vs Bird, One-on-One',
@@ -197,7 +204,7 @@ var app = new Vue({
       	link: 'https://archive.org/details/agi_uri-quest-v0.173',
       	winner: true,
         episode: 3,
-      	ranking: 7,
+      	ranking: 8,
       },
       {
       	title: 'Project Neptune' ,
