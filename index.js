@@ -122,6 +122,13 @@ var app = new Vue({
       	ranking: null,
       },
       {
+        title: 'Kret' ,
+        link: 'https://archive.org/details/msdos_Kret_1991',
+        winner: true,
+        episode: 6,
+        ranking: 5,
+      },
+      {
       	title: 'Adventures in Melgratta',
       	link: 'https://archive.org/details/msdos_4th_and_Inches_1988',
       	winner: false,
@@ -129,18 +136,18 @@ var app = new Vue({
       	ranking: null,
       },
       {
-      	title: 'Kret' ,
-      	link: 'https://archive.org/details/msdos_Kret_1991',
-      	winner: true,
-      	episode: 6,
-      	ranking: 5,
-      },
-      {
       	title: '4th & Inches',
       	link: 'https://archive.org/details/game-maker_adventures-in-melgratta',
       	winner: false,
         episode: 6,
       	ranking: null,
+      },
+      {
+        title: 'Lords of Doom',
+        link: 'https://archive.org/details/msdos_Lords_of_Doom_1990',
+        winner: true,
+        episode: 5,
+        ranking: 7,
       },
       {
       	title: 'Timothy Leary\'s Mind Mirror' ,
@@ -155,13 +162,6 @@ var app = new Vue({
       	winner: false,
         episode: 5,
       	ranking: null,
-      },
-      {
-      	title: 'Lords of Doom',
-      	link: 'https://archive.org/details/msdos_Lords_of_Doom_1990',
-      	winner: true,
-        episode: 5,
-      	ranking: 7,
       },
       {
       	title: 'Jordan vs Bird, One-on-One',
@@ -186,6 +186,13 @@ var app = new Vue({
       	ranking: null,
       },
       {
+        title: 'URI Quest, Chapter One: The Freshman Encounter',
+        link: 'https://archive.org/details/agi_uri-quest-v0.173',
+        winner: true,
+        episode: 3,
+        ranking: 8,
+      },
+      {
       	title: 'Graeme Souness Soccer Manager' ,
       	link: 'https://archive.org/details/msdos_Graeme_Souness_Soccer_Manager_1992',
       	winner: false,
@@ -198,13 +205,6 @@ var app = new Vue({
       	winner: false,
         episode: 3,
       	ranking: null,
-      },
-      {
-      	title: 'URI Quest, Chapter One: The Freshman Encounter',
-      	link: 'https://archive.org/details/agi_uri-quest-v0.173',
-      	winner: true,
-        episode: 3,
-      	ranking: 8,
       },
       {
       	title: 'Project Neptune' ,
@@ -228,6 +228,13 @@ var app = new Vue({
       	ranking: null,
       },
       {
+        title: 'Metaltech Battledrome',
+        link: 'https://archive.org/details/msdos_Metaltech_Battledrome_1994',
+        winner: true,
+        episode: 1,
+        ranking: 1,
+      },
+      {
       	title: 'Pyramid Power' ,
       	link: 'https://archive.org/details/msdos_Pyramid_Power_1986',
       	winner: false,
@@ -240,13 +247,6 @@ var app = new Vue({
       	winner: false,
         episode: 1,
       	ranking: null,
-      },
-      {
-      	title: 'Metaltech Battledrome',
-      	link: 'https://archive.org/details/msdos_Metaltech_Battledrome_1994',
-      	winner: true,
-        episode: 1,
-      	ranking: 1,
       },
     ]
   },
