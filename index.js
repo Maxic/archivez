@@ -57,8 +57,7 @@ var app = new Vue({
   el: '#app',
   data: {
   	toggleEpisode : true,
-    games: [ 
-      /*     
+    games: [     
       {
         title : "DEMO .EXE (Obscure MS-DOS Game)",
         link: "https://archive.org/details/demoexe",
@@ -80,7 +79,6 @@ var app = new Vue({
         episode: 9,
         ranking: null,
       },
-
       {
       	title: "Troll's Tale",
       	link: "https://archive.org/details/msdos_Trolls_Tale_1984",
@@ -102,7 +100,6 @@ var app = new Vue({
         episode: 8,
       	ranking: null,
       },
-      */
       {
       	title: "Sopwith 2",
       	link: "https://archive.org/details/msdos_Sopwith_2_1985",
