@@ -3,6 +3,9 @@ Vue.component('episode-list', {
 	template:
 	`
     <div class="container">
+		<div class="one column">
+		Episode {{ game.episode }}
+		</div>
      <div class="three columns">
       <div v-if="game.episode % 2 == 0">
        <center>
@@ -57,7 +60,7 @@ var app = new Vue({
   el: '#app',
   data: {
   	toggleEpisode : true,
-    games: [     
+    games: [
       {
         title : "DEMO .EXE (Obscure MS-DOS Game)",
         link: "https://archive.org/details/demoexe",
