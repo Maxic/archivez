@@ -3,9 +3,6 @@ Vue.component('episode-list', {
 	template:
 	`
     <div class="container">
-		<div class="one column">
-		Episode {{ game.episode }}
-		</div>
      <div class="three columns">
       <div v-if="game.episode % 2 == 0">
        <center>
