@@ -61,9 +61,9 @@ var app = new Vue({
       {
         title : "DEMO .EXE (Obscure MS-DOS Game)",
         link: "https://archive.org/details/demoexe",
-        winner: false,
+        winner: true,
         episode: 9,
-        ranking: null,
+        ranking: 9,
       },
       {
         title: "Tag Team Wrestling",
