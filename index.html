@@ -26,7 +26,7 @@
         </div>
         <div>
           <br>
-          <br> 
+          <br>
           <div class="row">
             <div class="three columns">
               <a href="mailto:archivezpodcast@gmail.com"><center><img src="assets/mail.png"></center>
@@ -49,8 +49,8 @@
         <br><br><br>
         <episode-list
           v-if="toggleEpisode"
-          v-for="game in games"
-          v-bind:game="game">
+          v-for="episode in episodes"
+          v-bind:episode="game">
         </episode-list>
         <ranking-list
           v-if="!toggleEpisode"
