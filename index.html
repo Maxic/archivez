@@ -47,18 +47,11 @@
           </div>
         </div>
         <br><br><br>
-        <episode-list
-          v-if="toggleEpisode"
-          v-for="episode in episodes"
-          v-bind:episode="game">
+        <episode-list v-for="episode in episodes"
+          v-bind:episode="episode">
         </episode-list>
-        <ranking-list
-          v-if="!toggleEpisode"
-          v-for="game in orderedGames"
-          v-bind:game="game"
-          v-bind:key="game.ranking">
-        </ranking-list>
-      </div>
+        <br><br><br>
+       </div>
       <script src="index.js"></script>
     </body>
 </html>
