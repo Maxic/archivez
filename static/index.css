@@ -1,6 +1,6 @@
 html, body {
-    margin: 5px;
     padding: 0;
+    background-image: url("../assets/download.png");
 }
 
 .center {
@@ -15,6 +15,11 @@ html, body {
   src: url(Fipps-Regular.otf);
 }
 
+@font-face {
+  font-family: win95;
+  src: url(Perfect.ttf);
+}
+
 .graybg {
 	background: -moz-radial-gradient(center, ellipse cover, rgba(255,235,250,0.65) 0%, rgba(255,235,250,0) 100%);
 	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,235,250,0.65) 0%,rgba(255,235,250,0) 100%);
@@ -23,12 +28,20 @@ html, body {
 }
 
 a {
-  font-family: bitmap;
+  font-family: win95;
   text-decoration: none;
   color: black;
 }
+
+.epheader {
+  font-family: win95;
+  text-decoration: none;
+  color: black;
+
+}
+
 .links {
-  font-family: bitmap;
+  font-family: win95;
   text-decoration: none;
   color: black;
 }
@@ -88,7 +101,7 @@ a:hover {
 }
 
 .container {
-
+ background-color: white;
 }
 
 input:checked + .slider {

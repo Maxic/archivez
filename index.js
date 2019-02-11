@@ -7,14 +7,21 @@ Vue.component('episode-list', {
 	<div class="episode">
 	<div class="row">
 	<div class="three columns">
-	 <img src="assets/ephead.png">{{ episode.id }}
+	<center>
+	<span class="epheader">Episode_{{ episode.id }}</span>
+	</center>
 	</div>
 	</div>
 	<div class="row">
-		<div class="twelve columns">
+	 <div class="three columns">&nbsp;</div>
+	 <div class="six columns">
 		 <game-list v-for="game in episode.games" v-bind:game="game">
 		 </game-list>
     </div>
+		<div class="three columns">&nbsp;</div>
+	</div>
+	<div class="row">
+	<div class="one column">&nbsp;</div>
 	</div>
 	</div>
 	`,
