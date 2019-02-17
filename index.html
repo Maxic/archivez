@@ -26,7 +26,6 @@
             &nbsp;
           </div>
         </div>
-        <div>
           <br>
           <br>
           <div class="row">
@@ -53,8 +52,7 @@
             </div>
             <div class="two columns">&nbsp;</div>
           </div>
-        </div>
-        <br><br><br>
+          <br><br><br>
         <div class="row">
           <div class="one column">
           </div>
@@ -66,12 +64,12 @@
                 </label>
               </center>
             </div>
-            <div class="seven columns">
-             <div class="ranking">
-               <span v-if="toggleEpisode"><b>Episodes</b> / Ranking</span>
-               <span v-if="!toggleEpisode">Episodes / <b>Ranking</b><span></div>
-            </div>
+           <div class="one column">&nbsp;</div>
+           <div class="six columns">
+            <span v-if="toggleEpisode"><b>Episodes</b> / Ranking</span>
+            <span v-if="!toggleEpisode">Episodes / <b>Ranking</b><span>
           </div>
+        </div>
           <br>
         <episode-list v-if="toggleEpisode" v-for="episode in episodes"
           v-bind:episode="episode">
