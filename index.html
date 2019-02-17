@@ -8,57 +8,91 @@
       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
-      <img src="assets/Logo.png" class=center>
-      <div class="container" id="app">
+        <div class="container" id="app">
+        <div class="row">
+          <img src="assets/archivezheader.gif" class="header">
+        </div>
+        <div class="row">
+        <div class="two columns">&nbsp;</div>
+        <div class="eight columns">
+          <center>
+            <span class="blurp"><b>ARCHIVEZ</b> is een podcast over de MS-DOS games collectie op Archive.org. Elke week selecteert ons script 3 willekeurige items uit deze collectie en bespreken we ze. Het kost 32 jaar om alle games te bespreken en dit is een slecht concept. Veel plezier!</span>
+          </center>
+        </div>
+        <div class="two columns">&nbsp;</div>
+        </div>
         <div class="row">
           <div class="eleven columns">
             &nbsp;
           </div>
         </div>
-        <div class="row">
-          <div class="one column">
-            <label class="switch">
-              <input type="checkbox" v-on:click="switchView" hidden>
-              <span class="slider round"></span>
-              <div class="ranking">Ranking</div>
-            </label>
-          </div>
-        </div>
         <div>
           <br>
-          <br> 
+          <br>
           <div class="row">
-            <div class="three columns">
+            <div class="two columns">&nbsp;</div>
+            <div class="two columns">
               <a href="mailto:archivezpodcast@gmail.com"><center><img src="assets/mail.png"></center>
+                  <br>
               <center>Mail ons</center></a>
             </div>
-            <div class="three columns">
+            <div class="two columns">
               <a href="https://twitter.com/davidalpha"><center><img src="assets/tweet.png"></center>
+              <br>
               <center>Tweet</center></a>
             </div>
-            <div class="three columns">
+            <div class="two columns">
               <a href="https://soundcloud.com/user-328346920-782030863"><center><img src="assets/soundcloud.png"></center>
+                <br>
               <center>Soundcloud</center></a>
             </div>
-            <div class="three columns">
+            <div class="two columns">
               <a href="https://itunes.apple.com/nl/podcast/archivez/id1436148435?mt=2"><center><img src="assets/itunes.png"></center>
+                  <br>
               <center>iTunes</center></a>
             </div>
+            <div class="two columns">&nbsp;</div>
           </div>
         </div>
         <br><br><br>
-        <episode-list
-          v-if="toggleEpisode"
-          v-for="game in games"
-          v-bind:game="game">
+        <div class="row">
+          <div class="one column">
+          </div>
+            <div class="one columns">
+              <center>
+                <label class="switch">
+                  <input type="checkbox" v-on:click="switchView" hidden>
+                  <span class="slider round"></span>
+                </label>
+              </center>
+            </div>
+            <div class="seven columns">
+             <div class="ranking">
+               <span v-if="toggleEpisode"><b>Episodes</b> / Ranking</span>
+               <span v-if="!toggleEpisode">Episodes / <b>Ranking</b><span></div>
+            </div>
+          </div>
+          <br>
+        <episode-list v-if="toggleEpisode" v-for="episode in episodes"
+          v-bind:episode="episode">
         </episode-list>
-        <ranking-list
-          v-if="!toggleEpisode"
-          v-for="game in orderedGames"
-          v-bind:game="game"
-          v-bind:key="game.ranking">
+        <ranking-list v-if="!toggleEpisode" v-for="episode in orderedEpisodes"
+          v-bind:episode="episode">
         </ranking-list>
+        <div class="row">
+         <div class="twelve columns">&nbsp;</div>
+         <div class="twelve columns">&nbsp;</div>
+        </div>
+        <div class="row">
+          <div class="one column">&nbsp;</div>
+          <div class="ten columns"><center>Podcast en website door Barend en David - gemaakt met skeleton css en vue.js</center></div>
+          <div class="one column">&nbsp;</div>
+        </div>
+        <div class="row">
+         <div class="twelve columns">&nbsp;</div>
+        </div>
       </div>
+
       <script src="index.js"></script>
     </body>
 </html>

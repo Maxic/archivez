@@ -1,18 +1,24 @@
 html, body {
-    margin: 5px;
-    padding: 0;
+    padding: 10px;
+    background-color: 57A8A8;
+    font-family: win95;
 }
 
-.center {
+.header {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    padding: 2%;
 }
 
 @font-face {
   font-family: bitmap;
   src: url(Fipps-Regular.otf);
+}
+
+@font-face {
+  font-family: win95;
+  src: url(Perfect.ttf);
 }
 
 .graybg {
@@ -23,29 +29,60 @@ html, body {
 }
 
 a {
-  font-family: bitmap;
+  font-family: win95;
   text-decoration: none;
   color: black;
-}
-.links {
-  font-family: bitmap;
-  text-decoration: none;
-  color: black;
-}
-.ranking {
-  font-family: bitmap;
-  text-decoration: none;
-  color: black;
-  position: relative; left: +67px;
-  position: relative; top: 8px;
 }
 
-.eplist {
-  font-family: bitmap;
+.rankings {
+  font-family: win95;
+  background-color: lightgrey;
+  color: black;
+  text-align: center;
+  border-right: 5px ridge lightgrey;
+  border-bottom: 5px ridge lightgrey;
+}
+
+.gamelink a:link {
+  font-family: win95;
   text-decoration: none;
   color: black;
-  position: relative; left: -67px;
-  position: relative; top: 8px;
+}
+
+.gamelink a:hover {
+  font-family: win95;
+  color: #e177fe;
+}
+
+.blurp {
+  font-family: win95;
+  text-decoration: none;
+  color: black;
+}
+
+.links {
+  font-family: win95;
+  text-decoration: none;
+  color: black;
+}
+
+.eplabel {
+  padding: 5px;
+  font-family: win95;
+  background-color: lightgrey;
+  color: black;
+  border-right: 5px ridge lightgrey;
+  border-bottom: 5px ridge lightgrey;
+}
+
+.e_episode {
+  padding: 10px;
+  background-color: white;
+}
+
+.u_episode {
+  padding: 10px;
+  background-color: #FAD9FC;
 }
 
 a:hover {
@@ -88,7 +125,8 @@ a:hover {
 }
 
 .container {
-
+  background-color: white;
+  border: 4px groove grey;
 }
 
 input:checked + .slider {
