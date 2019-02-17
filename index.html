@@ -13,9 +13,13 @@
           <img src="assets/archivezheader.gif" class="header">
         </div>
         <div class="row">
-        <center>
-          <span class="blurp"><b>ARCHIVEZ</b> is een podcast over de MS-DOS games collectie op Archive.org. Elke week selecteert ons script 3 willekeurige items uit deze collectie en bespreken we ze. Het kost 32 jaar om alle games te bespreken en dit is een slecht concept. Veel plezier!</span>
-        </center>
+        <div class="two columns">&nbsp;</div>
+        <div class="eight columns">
+          <center>
+            <span class="blurp"><b>ARCHIVEZ</b> is een podcast over de MS-DOS games collectie op Archive.org. Elke week selecteert ons script 3 willekeurige items uit deze collectie en bespreken we ze. Het kost 32 jaar om alle games te bespreken en dit is een slecht concept. Veel plezier!</span>
+          </center>
+        </div>
+        <div class="two columns">&nbsp;</div>
         </div>
         <div class="row">
           <div class="eleven columns">
@@ -26,22 +30,24 @@
           <br>
           <br>
           <div class="row">
-            <div class="three columns">
+            <div class="two columns">&nbsp;</div>
+            <div class="two columns">
               <a href="mailto:archivezpodcast@gmail.com"><center><img src="assets/mail.png"></center>
               <center>Mail ons</center></a>
             </div>
-            <div class="three columns">
+            <div class="two columns">
               <a href="https://twitter.com/davidalpha"><center><img src="assets/tweet.png"></center>
               <center>Tweet</center></a>
             </div>
-            <div class="three columns">
+            <div class="two columns">
               <a href="https://soundcloud.com/user-328346920-782030863"><center><img src="assets/soundcloud.png"></center>
               <center>Soundcloud</center></a>
             </div>
-            <div class="three columns">
+            <div class="two columns">
               <a href="https://itunes.apple.com/nl/podcast/archivez/id1436148435?mt=2"><center><img src="assets/itunes.png"></center>
               <center>iTunes</center></a>
             </div>
+            <div class="two columns">&nbsp;</div>
           </div>
         </div>
         <br><br><br>
@@ -61,9 +67,12 @@
             </div>
           </div>
           <br>
-        <episode-list v-for="episode in episodes"
+        <episode-list v-if="toggleEpisode" v-for="episode in episodes"
           v-bind:episode="episode">
         </episode-list>
+        <ranking-list v-if="!toggleEpisode" v-for="episode in episodes"
+          v-bind:episode="episode">
+        </ranking-list>
       </div>
       <script src="index.js"></script>
     </body>

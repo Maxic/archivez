@@ -6,31 +6,32 @@ Vue.component('episode-list', {
 	`
 	<div v-if="episode.id % 2 == 0" class="e_episode">
 	<div class="row">
-	<div class="three columns">
-	<center>
-	<span class="epheader">Episode_{{ episode.id }}</span>
-	</center>
-	</div>
+		<div class="three columns">
+			<center>
+				<span class="epheader">Episode_{{ episode.id }}</span>
+			</center>
+		</div>
+		<div class="nine columns">&nbsp;</div>
 	</div>
 	<div class="row">
 	 <div class="three columns">&nbsp;</div>
 	 <div class="six columns">
 		 <game-list v-for="game in episode.games" v-bind:game="game">
 		 </game-list>
-    </div>
-		<div class="three columns">&nbsp;</div>
+   </div>
+	 <div class="three columns">&nbsp;</div>
 	</div>
 	<div class="row">
-	<div class="one column">&nbsp;</div>
-	</div>
+	 <div class="one column">&nbsp;</div>
+	 </div>
 	</div>
 	<div v-else class="u_episode">
-	<div class="row">
-	<div class="three columns">
-	<center>
-	<span class="epheader">Episode_{{ episode.id }}</span>
-	</center>
-	</div>
+	 <div class="row">
+	  <div class="three columns">
+	   <center>
+	    <span class="epheader">Episode_{{ episode.id }}</span>
+	   </center>
+	  </div>
 	</div>
 	<div class="row">
 	 <div class="three columns">&nbsp;</div>
@@ -67,21 +68,24 @@ Vue.component('game-list', {
 
 
 Vue.component('ranking-list', {
-	props: ['game'],
+	props: ['episode'],
 	template:
 	`
-	<div class="container">
-	 <div v-if="game.winner" class="row">
-	  <div class="three columns">
-	   <img v-if="game.ranking == 1" src="assets/MS-DOS_icon_gold.gif" height=68>
-       <img v-else src="assets/MS-DOS_icon_gold.png" height=68>
-      </div>
-      <div class="nine columns">
-       <br>
-       <a :href="game.link">{{ game.ranking }}. {{ game.title }}</a>
-      </div>
-	 </div>
-	 <br>
+	<div class="row">
+		<div class="three columns">
+			<center>
+				<span class="epheader">Episode_{{ episode.id }}</span>
+			</center>
+		</div>
+		<div class="nine columns">&nbsp;</div>
+	</div>
+	<div class="row">
+	 <div class="three columns">&nbsp;</div>
+	 <div class="six columns">
+		 <game-list v-for="game in episode.games" v-bind:game="game">
+		 </game-list>
+   </div>
+	 <div class="three columns">&nbsp;</div>
 	</div>
 	`,
 })
