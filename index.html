@@ -54,21 +54,18 @@
           </div>
           <br><br><br>
         <div class="row">
-          <div class="one column">
+        <div class="one column">&nbsp;</div>
+        <div class="one column">
+         <label class="switch">
+          <input type="checkbox" v-on:click="switchView" hidden>
+          <span class="slider round"></span>
+         </label>
+        </div>
+            <div class="three columns">
+            <span v-if="toggleEpisode"><u>Episodes</u> / Ranking</span>
+            <span v-if="!toggleEpisode">Episodes / <u>Ranking</u><span>
           </div>
-            <div class="one columns">
-              <center>
-                <label class="switch">
-                  <input type="checkbox" v-on:click="switchView" hidden>
-                  <span class="slider round"></span>
-                </label>
-              </center>
-            </div>
-           <div class="one column">&nbsp;</div>
-           <div class="six columns">
-            <span v-if="toggleEpisode"><b>Episodes</b> / Ranking</span>
-            <span v-if="!toggleEpisode">Episodes / <b>Ranking</b><span>
-          </div>
+          <div class="eight columns">&nbsp;</div>
         </div>
           <br>
         <episode-list v-if="toggleEpisode" v-for="episode in episodes"

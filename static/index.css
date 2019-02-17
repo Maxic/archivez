@@ -134,7 +134,7 @@ a:hover {
 
 .container {
   background-color: white;
-  border: 4px groove grey;
+  border: 4px outset grey;
 }
 
 input:checked + .slider {
