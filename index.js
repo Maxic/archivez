@@ -8,7 +8,7 @@ Vue.component('episode-list', {
 	<div class="row">
 		<div class="three columns">
 			<center>
-				<span class="epheader">Episode_{{ episode.id }}</span>
+				<span class="eplabel">Episode_{{ episode.id }}</span>
 			</center>
 		</div>
 		<div class="nine columns">&nbsp;</div>
@@ -27,9 +27,9 @@ Vue.component('episode-list', {
 	</div>
 	<div v-else class="u_episode">
 	 <div class="row">
-	  <div class="three columns">
+	  <div class="three columns" style="align-content: center">
 	   <center>
-	    <span class="epheader">Episode_{{ episode.id }}</span>
+	    <span class="eplabel">Episode_{{ episode.id }}</span>
 	   </center>
 	  </div>
 	</div>
@@ -66,6 +66,13 @@ Vue.component('game-list', {
 	`,
 })
 
+Vue.component('game-ranked-list', {
+	props: ['game'],
+	template:
+	`
+		<span class="gamelink"><a :href="game.link">{{ game.title }}</a></span>
+	`,
+})
 
 Vue.component('ranking-list', {
 	props: ['episode'],
@@ -73,11 +80,12 @@ Vue.component('ranking-list', {
 	`
 	<div class="row">
 	 <div class="three columns">&nbsp;</div>
-	 <div class="six columns">
-		 <game-list v-for="game in orderedGames" v-bind:game="game" v-if="game.ranking != null">
-		 </game-list>
-   </div>
-	 <div class="three columns">&nbsp;</div>
+	 <div class="one column"><span class="rankings">{{ episode.ranking }}</span></div>
+		 <div class="five columns">
+		  <game-ranked-list v-for="game in episode.games" v-bind:game="game" v-if="game.winner">
+		 </game-ranked-list>
+		</div>
+	  <div class="three columns">&nbsp;</div>
 	</div>
 	`,
 })
@@ -110,6 +118,7 @@ var app = new Vue({
 
 								},
 								{ id: 10,
+									ranking: 1,
 									games: [
 													{
 														title: "NARCS",
@@ -136,7 +145,7 @@ var app = new Vue({
 
 },
   computed: {
-  	orderedGames : function(){
+  	orderedEpisodes : function(){
   		return this.episodes.filter(function(a){ return a.ranking != null
   		}).sort(function(a,b){return a.ranking - b.ranking})
   	}

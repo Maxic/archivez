@@ -1,6 +1,7 @@
 html, body {
     padding: 10px;
     background-color: 57A8A8;
+    font-family: win95;
 }
 
 .header {
@@ -28,16 +29,16 @@ html, body {
 }
 
 a {
-  font-family: bitmap;
+  font-family: win95;
   text-decoration: none;
   color: black;
 }
 
-.epheader {
-  padding: 5px;
+.rankings {
   font-family: win95;
   background-color: lightgrey;
   color: black;
+  text-align: center;
   border-right: 5px ridge lightgrey;
   border-bottom: 5px ridge lightgrey;
 }
@@ -64,13 +65,24 @@ a {
   text-decoration: none;
   color: black;
 }
-.ranking {
+
+.eplabel {
+  padding: 5px;
   font-family: win95;
+  background-color: lightgrey;
   color: black;
+  border-right: 5px ridge lightgrey;
+  border-bottom: 5px ridge lightgrey;
 }
 
 .e_episode {
+  padding: 10px;
   background-color: white;
+}
+
+.u_episode {
+  padding: 10px;
+  background-color: #FAD9FC;
 }
 
 a:hover {
