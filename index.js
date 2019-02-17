@@ -4,7 +4,7 @@ Vue.component('episode-list', {
 	props: ['episode'],
 	template:
 	`
-	<div class="episode">
+	<div v-if="episode.id % 2 == 0" class="e_episode">
 	<div class="row">
 	<div class="three columns">
 	<center>
@@ -24,6 +24,26 @@ Vue.component('episode-list', {
 	<div class="one column">&nbsp;</div>
 	</div>
 	</div>
+	<div v-else class="u_episode">
+	<div class="row">
+	<div class="three columns">
+	<center>
+	<span class="epheader">Episode_{{ episode.id }}</span>
+	</center>
+	</div>
+	</div>
+	<div class="row">
+	 <div class="three columns">&nbsp;</div>
+	 <div class="six columns">
+		 <game-list v-for="game in episode.games" v-bind:game="game">
+		 </game-list>
+		</div>
+		<div class="three columns">&nbsp;</div>
+	</div>
+	<div class="row">
+	<div class="one column">&nbsp;</div>
+	</div>
+	</div>
 	`,
 })
 
@@ -34,12 +54,12 @@ Vue.component('game-list', {
 	<div class="row">
 		<div class ="three columns">
 		<center>
-		 <img v-if="game.winner" src="assets/MS-DOS_icon_gold.png" height=68>
-		 <img v-else src="assets/MS-DOS_icon.png" height=68>
+		 <img v-if="game.winner" src="assets/MS-DOS_icon_gold.png" height=34>
+		 <img v-else src="assets/MS-DOS_icon.png" height=34>
 		</center>
 		</div>
-		<div class="six columns">
-			<center><a :href="game.link">{{ game.title }}</a></center>
+		<div class="nine columns">
+			<div class="gamelink"><center><a :href="game.link">{{ game.title }}</a></center></div>
 		</div>
 		</div>
 	`,

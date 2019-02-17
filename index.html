@@ -8,20 +8,18 @@
       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
-      <img src="assets/Logo.png" class=center>
-      <div class="container" id="app">
+        <div class="container" id="app">
+        <div class="row">
+          <img src="assets/archivezheader.gif" class="header">
+        </div>
+        <div class="row">
+        <center>
+          <span class="blurp"><b>ARCHIVEZ</b> is een podcast over de MS-DOS games collectie op Archive.org. Elke week selecteert ons script 3 willekeurige items uit deze collectie en bespreken we ze. Het kost 32 jaar om alle games te bespreken en dit is een slecht concept. Veel plezier!</span>
+        </center>
+        </div>
         <div class="row">
           <div class="eleven columns">
             &nbsp;
-          </div>
-        </div>
-        <div class="row">
-          <div class="one column">
-            <label class="switch">
-              <input type="checkbox" v-on:click="switchView" hidden>
-              <span class="slider round"></span>
-              <div class="ranking">Ranking</div>
-            </label>
           </div>
         </div>
         <div>
@@ -47,6 +45,22 @@
           </div>
         </div>
         <br><br><br>
+        <div class="row">
+          <div class="one column">
+          </div>
+            <div class="one columns">
+              <center>
+                <label class="switch">
+                  <input type="checkbox" v-on:click="switchView" hidden>
+                  <span class="slider round"></span>
+                </label>
+              </center>
+            </div>
+            <div class="seven columns">
+             <div class="ranking">Episodes / Ranking</div>
+            </div>
+          </div>
+          <br>
         <episode-list v-for="episode in episodes"
           v-bind:episode="episode">
         </episode-list>
