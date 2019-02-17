@@ -72,17 +72,9 @@ Vue.component('ranking-list', {
 	template:
 	`
 	<div class="row">
-		<div class="three columns">
-			<center>
-				<span class="epheader">Episode_{{ episode.id }}</span>
-			</center>
-		</div>
-		<div class="nine columns">&nbsp;</div>
-	</div>
-	<div class="row">
 	 <div class="three columns">&nbsp;</div>
 	 <div class="six columns">
-		 <game-list v-for="game in episode.games" v-bind:game="game">
+		 <game-list v-for="game in orderedGames" v-bind:game="game" v-if="game.ranking != null">
 		 </game-list>
    </div>
 	 <div class="three columns">&nbsp;</div>
@@ -96,25 +88,23 @@ var app = new Vue({
   	toggleEpisode : true,
 		episodes: [
 								{ id: 9,
+									ranking: 9,
 								  games: [
 												  {
 														title: "DEMO .EXE (Obscure MS-DOS Game)",
 														link: "https://archive.org/details/demoexe",
 														winner: true,
 														episode: 9,
-														ranking: 9,
 													}, {
 														title: "Tag Team Wrestling",
 														link: "https://archive.org/details/msdos_Tag_Team_Wrestling_1986",
 														winner: false,
 														episode: 9,
-														ranking: null,
 													}, {
 														title: "Druglord",
 														link: "https://archive.org/details/msdos_Druglord_1991",
 														winner: false,
 														episode: 9,
-														ranking: null,
 													}
 												]
 
@@ -147,7 +137,7 @@ var app = new Vue({
 },
   computed: {
   	orderedGames : function(){
-  		return this.games.filter(function(a){ return a.ranking != null
+  		return this.episodes.filter(function(a){ return a.ranking != null
   		}).sort(function(a,b){return a.ranking - b.ranking})
   	}
   },
