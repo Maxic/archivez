@@ -79,13 +79,14 @@ Vue.component('ranking-list', {
 	template:
 	`
 	<div class="row">
-	 <div class="three columns">&nbsp;</div>
-	 <div class="one column"><span class="rankings">{{ episode.ranking }}</span></div>
-		 <div class="five columns">
+	 <div class="two columns">&nbsp;</div>
+	 <div class="one column"><div class="rankinglabel">{{ episode.ranking }}</div></div>
+		 <div class="seven columns"><div class="ranking">
 		  <game-ranked-list v-for="game in episode.games" v-bind:game="game" v-if="game.winner">
-		 </game-ranked-list>
+		  </game-ranked-list>
+		 </div>
 		</div>
-	  <div class="three columns">&nbsp;</div>
+	  <div class="two columns">&nbsp;</div>
 	</div>
 	`,
 })
