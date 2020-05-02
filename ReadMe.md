@@ -1,3 +1,3 @@
-This is the http://archivez.fyi website repository. 
+This is the http://archivez.xyz website repository. 
 
 The site is realized by using the Vue.js framework.
