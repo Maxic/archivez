@@ -10,7 +10,9 @@
     <body>
         <div class="container" id="app">
         <div class="row">
-          <img src="assets/archivezheader.gif" class="header">
+          <div class="twelve columns">
+            <img src="assets/archivezheader.gif" class="header">
+          </div>
         </div>
         <div class="row">
         <div class="two columns">&nbsp;</div>
@@ -22,7 +24,7 @@
         <div class="two columns">&nbsp;</div>
         </div>
         <div class="row">
-          <div class="eleven columns">
+          <div class="twelve columns">
             &nbsp;
           </div>
         </div>
@@ -52,20 +54,19 @@
             </div>
             <div class="two columns">&nbsp;</div>
           </div>
-          <br><br><br>
+          <br><br>
         <div class="row">
-        <div class="one column">&nbsp;</div>
-        <div class="one column">
-         <label class="switch">
-          <input type="checkbox" v-on:click="switchView" hidden>
-          <span class="slider round"></span>
-         </label>
+          <div class="one column">&nbsp;</div>
+          <div class="nine columns"><p>Click to switch: </p></div>
+          <div class="one column">&nbsp;</div>
         </div>
-            <div class="three columns">
-            <span v-if="toggleEpisode"><u>Episodes</u> / Ranking</span>
-            <span v-if="!toggleEpisode">Episodes / <u>Ranking</u><span>
+        <div class="row">
+          <div class="one column">&nbsp;</div>
+          <div class="nine columns">
+            <span class="switcher" v-if="toggleEpisode" v-on:click="switchView"><u>Episodes</u> | Ranking</span>
+            <span class="switcher" v-if="!toggleEpisode" v-on:click="switchView">Episodes | <u>Ranking</u><span>
           </div>
-          <div class="eight columns">&nbsp;</div>
+          <div class="one column">&nbsp;</div>
         </div>
           <br>
         <episode-list v-if="toggleEpisode" v-for="episode in episodes"
